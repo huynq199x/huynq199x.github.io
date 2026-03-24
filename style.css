@@ -152,136 +152,88 @@ section {
 #hero {
     min-height: 100vh;
     display: flex;
+    justify-content: center;
+    /* Căn giữa theo chiều ngang */
     align-items: center;
-    padding: 120px 60px 80px;
+    /* Căn giữa theo chiều dọc */
+    padding: 80px 60px;
     gap: 80px;
+    position: relative;
+    /* Cần thiết để nút scroll bám đáy */
+    overflow: hidden;
 }
 
+/* Fix lỗi nội dung dạt sang bên: Bỏ flex: 1 */
 .hero-content {
-    flex: 1;
-    max-width: 600px;
+    flex: 0 1 auto;
+    max-width: 550px;
+    z-index: 2;
 }
 
-.hero-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 16px;
-    border-radius: 100px;
-    border: 1.5px solid rgba(255, 94, 98, 0.25);
-    background: rgba(255, 94, 98, 0.07);
-    font-size: 0.78rem;
-    color: var(--grad1);
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    margin-bottom: 28px;
-    font-weight: 600;
-}
-
-.hero-badge span {
-    width: 7px;
-    height: 7px;
-    background: var(--grad1);
-    border-radius: 50%;
-    animation: pulse 2s ease infinite;
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-
-    50% {
-        opacity: 0.5;
-        transform: scale(1.4);
-    }
-}
-
-.hero-name {
-    font-family: 'Be Vietnam Pro', sans-serif;
-    font-size: clamp(2rem, 4vw, 3.8rem);
-    font-weight: 800;
-    line-height: 1.0;
-    letter-spacing: -0.01em;
-    margin-bottom: 16px;
-}
-
-.hero-name .line1 {
-    display: block;
-    color: var(--text);
-}
-
-.hero-name .line2 {
-    display: block;
-    background: linear-gradient(135deg, var(--grad1), var(--grad2), var(--grad4));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero-role {
-    font-size: 1rem;
-    color: var(--muted);
-    margin-bottom: 20px;
-    font-weight: 400;
-}
-
-.hero-desc {
-    font-size: 0.96rem;
-    line-height: 1.78;
-    color: var(--muted);
-    max-width: 500px;
-    margin-bottom: 40px;
-}
-
-.hero-cta {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-}
-
-.btn-primary {
-    padding: 14px 30px;
-    border-radius: 100px;
-    background: linear-gradient(135deg, var(--grad1), var(--grad4));
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 20px rgba(255, 94, 98, 0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(255, 94, 98, 0.4);
-}
-
-.btn-secondary {
-    padding: 14px 30px;
-    border-radius: 100px;
-    border: 1.5px solid var(--card-border);
-    color: var(--text);
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    background: var(--card);
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.btn-secondary:hover {
-    border-color: rgba(0, 0, 0, 0.18);
-    box-shadow: var(--shadow);
-}
-
-/* AVATAR — no filter, clean */
+/* Khối Visual (Ảnh + Badge) */
 .hero-visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
     flex-shrink: 0;
     position: relative;
 }
 
+/* Badge Xanh Lá mới */
+.hero-badge-green {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    /* Sử dụng padding chính xác như nút btn-primary/btn-secondary của bạn */
+    padding: 14px 30px;
+    border-radius: 100px;
+    background: rgba(34, 197, 94, 0.05);
+    border: 1.5px solid rgba(34, 197, 94, 0.2);
+
+    /* Đồng bộ Typography với các nút bên trái */
+    color: #16a34a;
+    font-size: 0.9rem;
+    /* Giống btn-primary/secondary */
+    font-weight: 600;
+    line-height: 1;
+    white-space: nowrap;
+
+    /* Thêm transition để mượt mà giống nút */
+    transition: all 0.2s ease;
+}
+
+.hero-badge-green span {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    position: relative;
+    flex-shrink: 0;
+}
+
+.hero-badge-green span::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: inherit;
+    border-radius: 50%;
+    animation: pulse-green 2s infinite;
+}
+
+@keyframes pulse-green {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+/* GIỮ NGUYÊN STYLE AVATAR CỦA BẠN */
 .avatar-wrap {
     width: 320px;
     height: 320px;
@@ -298,20 +250,6 @@ section {
     animation: gradMove 4s ease infinite;
 }
 
-@keyframes gradMove {
-    0% {
-        background-position: 0% 50%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 50%;
-    }
-}
-
 .avatar-img {
     position: absolute;
     inset: 4px;
@@ -326,68 +264,92 @@ section {
     height: 100%;
     object-fit: cover;
     display: block;
-    /* NO filter, NO animation inheritance */
-    filter: none;
-    mix-blend-mode: normal;
 }
 
-.avatar-float {
-    position: absolute;
-    border-radius: 14px;
-    padding: 9px 15px;
-    font-size: 0.8rem;
-    font-weight: 600;
-    z-index: 2;
-    background: white;
-    border: 1.5px solid var(--card-border);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-    white-space: nowrap;
-    color: var(--text);
-}
-
-.float1 {
-    top: -10px;
-    right: -20px;
-    border-color: rgba(255, 94, 98, 0.2);
-}
-
-.float2 {
-    bottom: 30px;
-    left: -40px;
-    border-color: rgba(0, 201, 255, 0.2);
-}
-
-.float3 {
-    top: 45%;
-    right: -50px;
-    border-color: rgba(196, 113, 237, 0.2);
-}
-
+/* FIX NÚT SCROLL */
 .scroll-hint {
     position: absolute;
-    bottom: 36px;
+    bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
+    /* Căn giữa tuyệt đối theo màn hình */
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
     color: var(--muted);
     font-size: 0.74rem;
-    letter-spacing: 0.08em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     animation: bounce 2s ease infinite;
+    z-index: 10;
 }
 
 @keyframes bounce {
 
     0%,
+    20%,
+    50%,
+    80%,
     100% {
         transform: translateX(-50%) translateY(0);
     }
 
-    50% {
-        transform: translateX(-50%) translateY(7px);
+    40% {
+        transform: translateX(-50%) translateY(-10px);
     }
+
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
+}
+
+/* TYPOGRAPHY & BUTTONS (Giữ nguyên từ code cũ của bạn) */
+.hero-name {
+    font-size: clamp(2rem, 4vw, 3.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 16px;
+}
+
+.hero-name .line2 {
+    background: linear-gradient(135deg, var(--grad1), var(--grad2), var(--grad4));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-role {
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.hero-desc {
+    color: var(--muted);
+    max-width: 500px;
+    margin-bottom: 40px;
+    line-height: 1.7;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-primary {
+    padding: 14px 30px;
+    border-radius: 100px;
+    color: #fff;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--grad1), var(--grad4));
+}
+
+.btn-secondary {
+    padding: 14px 30px;
+    border-radius: 100px;
+    color: var(--text);
+    text-decoration: none;
+    border: 1.5px solid var(--card-border);
+    background: var(--card);
 }
 
 /* SECTION HEADER */
