@@ -97,7 +97,7 @@ const translations = {
         contact_desc: "Have an interesting project or opportunity? I'm always open to new conversations!",
         about_loc: "Thanh Xuan District, Hanoi, Vietnam",
         scroll: "scroll",
-        about_edu: "Posts and Telecommunications Institute of Technology (PTIT) \nInformation Systems, 2017–2022",
+        about_edu: "Posts and Telecommunications Institute of Technology (PTIT) <br>Information Systems, 2017–2022",
     },
     vi: {
         nav_about: "Về tôi", nav_skills: "Kỹ năng", nav_exp: "Kinh nghiệm",
@@ -148,7 +148,7 @@ const translations = {
         contact_desc: "Bạn có dự án thú vị hoặc cơ hội hợp tác? Tôi luôn sẵn sàng lắng nghe!",
         about_loc: "Quận Thanh Xuân, TP. Hà Nội, Việt Nam",
         scroll: "Cuộn xuống",
-        about_edu: "Học viện Công nghệ Bưu chính Viễn thông (PTIT) \nHệ thống Thông tin, 2017–2022",
+        about_edu: "Học viện Công nghệ Bưu chính Viễn thông (PTIT) <br>Hệ thống Thông tin, 2017–2022",
     },
     ja: {
         nav_about: "自己紹介", nav_skills: "スキル", nav_exp: "経験",
@@ -199,7 +199,7 @@ const translations = {
         contact_desc: "面白いプロジェクトや機会があればぜひご連絡ください！",
         about_loc: "タインスアン区、ハノイ、ベトナム",
         scroll: "スクロール",
-        about_edu: "郵便通信工科大学（PTIT）\n情報システム学科、2017–2022",
+        about_edu: "郵便通信工科大学（PTIT）<br>情報システム学科、2017–2022",
     },
     zh: {
         nav_about: "关于我", nav_skills: "技能", nav_exp: "经验",
@@ -250,7 +250,7 @@ const translations = {
         contact_desc: "有有趣的项目或合作机会？欢迎随时联系！",
         about_loc: "清春郡，河内，越南",
         scroll: "向下滚动",
-        about_edu: "越南邮政电信学院（PTIT）\n信息系统专业，2017–2022",
+        about_edu: "越南邮政电信学院（PTIT）<br>信息系统专业，2017–2022",
     }
 };
 
