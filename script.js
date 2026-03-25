@@ -255,14 +255,14 @@ const translations = {
 };
 
 function changeLanguage(lang) {
-    if (!translations[lang]) lang = 'en';
+    if (!translations[lang]) lang = 'vi';
     localStorage.setItem('preferred_lang', lang);
 
     document.querySelectorAll('[data-i18n]').forEach(el => {
         const key = el.getAttribute('data-i18n');
         const val = (translations[lang] && translations[lang][key])
             ? translations[lang][key]
-            : (translations['en'][key] || '');
+            : (translations['vi'][key] || '');
         if (val) el.innerHTML = val;
     });
 
@@ -278,7 +278,7 @@ function changeLanguage(lang) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Default: English (international standard)
-    const savedLang = localStorage.getItem('preferred_lang') || 'en';
+    // Default: Vietnamese
+    const savedLang = localStorage.getItem('preferred_lang') || 'vi';
     changeLanguage(savedLang);
 });
