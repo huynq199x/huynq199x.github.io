@@ -282,3 +282,31 @@ document.addEventListener('DOMContentLoaded', () => {
     const savedLang = localStorage.getItem('preferred_lang') || 'vi';
     changeLanguage(savedLang);
 });
+
+function toggleFloatMenu() {
+  const btn  = document.getElementById('floatBtn');
+  const menu = document.getElementById('floatMenu');
+  btn.classList.toggle('open');
+  menu.classList.toggle('open');
+}
+ 
+// Close when clicking outside
+document.addEventListener('click', (e) => {
+  const fc = document.getElementById('floatContact');
+  if (fc && !fc.contains(e.target)) {
+    document.getElementById('floatBtn')?.classList.remove('open');
+    document.getElementById('floatMenu')?.classList.remove('open');
+  }
+});
+ 
+// WeChat: copy ID to clipboard
+function copyWechat(e) {
+  e.preventDefault();
+  navigator.clipboard.writeText('nqh_1999').then(() => {
+    const label = document.getElementById('wechatLabel');
+    if (label) {
+      label.textContent = '✓ Copied!';
+      setTimeout(() => { label.textContent = 'WeChat'; }, 2000);
+    }
+  });
+}
