@@ -25,9 +25,12 @@
     <div class="blob blob2"></div>
     <div class="blob blob3"></div>
   </div>
-
+  <div class="nav-overlay" id="navOverlay" onclick="closeNav()"></div>
   <nav>
     <a href="#hero" class="nav-logo">NQH</a>
+    <button class="nav-hamburger" id="navHamburger" onclick="toggleNav()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
     <ul class="nav-links">
       <li><a href="#about" data-i18n="nav_about">About</a></li>
       <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
