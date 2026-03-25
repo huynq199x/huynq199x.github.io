@@ -4,6 +4,9 @@
     --grad3: #00c9ff;
     --grad4: #c471ed;
     --grad5: #4facfe;
+    --grad6: #43e97b;
+    --grad7: #fa709a;
+    --grad8: #fee140;
     --bg: #f8f7ff;
     --bg2: #ffffff;
     --card: rgba(255, 255, 255, 0.85);
@@ -341,15 +344,26 @@ section {
 
 .hero-cta {
     display: flex;
-    gap: 14px;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .btn-primary {
     padding: 14px 30px;
     border-radius: 100px;
-    color: #fff;
+    color: var(--text);
     text-decoration: none;
-    background: linear-gradient(135deg, var(--grad1), var(--grad4));
+    background: linear-gradient(135deg, var(--grad7), var(--grad8));
+    
+    min-width: 140px;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 .btn-secondary {
@@ -359,6 +373,46 @@ section {
     text-decoration: none;
     border: 1.5px solid var(--card-border);
     background: var(--card);
+
+    min-width: 140px;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.btn-cv {
+    padding: 14px 30px;
+    border-radius: 100px;
+    color: #ffffff;
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--grad6), var(--grad5));
+
+    min-width: 140px;
+    text-align: center;
+    justify-content: center;
+    font-size: 0.88rem;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.btn-cv:hover {
+    background: linear-gradient(135deg, var(--grad3), var(--grad4));
+    color: #fff;
+}
+.btn-secondary:hover  {
+    background: linear-gradient(135deg, var(--grad3), var(--grad4));
+    color: #fff;
+}
+
+.btn-primary:hover  {
+    background: linear-gradient(135deg, var(--grad3), var(--grad4));
+    color: #fff;
 }
 
 /* SECTION HEADER */
