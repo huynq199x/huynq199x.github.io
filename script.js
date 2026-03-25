@@ -310,15 +310,3 @@ function copyWechat(e) {
     }
   });
 }
-
-function toggleNav() {
-  document.getElementById('navHamburger')?.classList.toggle('open');
-  document.querySelector('.nav-links')?.classList.toggle('open');
-  document.getElementById('navOverlay')?.classList.toggle('open');
-}
-function closeNav() {
-  document.getElementById('navHamburger')?.classList.remove('open');
-  document.querySelector('.nav-links')?.classList.remove('open');
-  document.getElementById('navOverlay')?.classList.remove('open');
-}
-document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', closeNav));
