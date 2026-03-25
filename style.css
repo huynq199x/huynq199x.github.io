@@ -1005,7 +1005,6 @@ footer {
   max-height: 500px;
   opacity: 1;
   pointer-events: all;
-  min-width: 200px;
 }
  
 .float-item {
@@ -1022,7 +1021,7 @@ footer {
   box-shadow: 0 3px 12px rgba(0,0,0,0.18);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   white-space: nowrap;
-  min-width: 130px;
+  
 }
 .float-item:hover {
   transform: translateX(-4px);
