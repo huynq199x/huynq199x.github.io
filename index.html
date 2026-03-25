@@ -29,11 +29,23 @@
   <nav>
     <a href="#hero" class="nav-logo">NQH</a>
     <ul class="nav-links">
-      <li><a href="#about">Về tôi / About</a></li>
-      <li><a href="#skills">Kỹ năng / Skills</a></li>
-      <li><a href="#experience">Kinh nghiệm / Exp</a></li>
-      <li><a href="#projects">Dự án / Projects</a></li>
-      <li><a href="#contact">Liên hệ / Contact</a></li>
+      <li><a href="#about" data-i18n="nav_about">About</a></li>
+      <li><a href="#skills" data-i18n="nav_skills">Skills</a></li>
+      <li><a href="#experience" data-i18n="nav_exp">Experience</a></li>
+      <li><a href="#projects" data-i18n="nav_projects">Projects</a></li>
+      <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+      <li class="lang-container">
+        <button class="lang-btn">
+          <span id="current-lang-icon">🇻🇳</span>
+          <span id="current-lang-text">VI</span>
+        </button>
+        <ul class="lang-dropdown">
+          <li onclick="changeLanguage('vi')">🇻🇳 Tiếng Việt</li>
+          <li onclick="changeLanguage('en')">🇺🇸 English</li>
+          <li onclick="changeLanguage('zh')">🇨🇳 中文</li>
+          <li onclick="changeLanguage('ja')">🇯🇵 日本語</li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -42,17 +54,15 @@
     <!-- KHỐI NỘI DUNG -->
     <div class="hero-content fade-up">
       <h1 class="hero-name">
-        <span class="line1">NGUYỄN QUANG</span>
-        <span class="line2">HUY</span>
+        <span class="line1" data-i18n="name_line1">NGUYỄN QUANG</span>
+        <span class="line2" data-i18n="name_line2">HUY</span>
       </h1>
-      <p class="hero-role">IoT System Engineer · iOS Developer · Full-stack Tinkerer</p>
-      <p class="hero-desc">
-        Kỹ sư phần mềm với đam mê xây dựng các giải pháp IoT thông minh và ứng dụng chất lượng cao.<br><br>
-        <em>Software engineer passionate about building intelligent IoT systems and high-quality applications.</em>
-      </p>
+      <p class="hero-role" data-i18n="hero_role">IoT System Engineer · iOS Developer · Full-stack Developer</p>
+      <p class="hero-desc" data-i18n="hero_desc">Kỹ sư phần mềm với đam mê xây dựng các giải pháp IoT thông minh và ứng
+        dụng chất lượng cao.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn-primary">Liên hệ · Get in Touch</a>
-        <a href="#projects" class="btn-secondary">Xem dự án · View Work</a>
+        <a href="#contact" class="btn-primary" data-i18n="btn_contact">Get in Touch</a>
+        <a href="#projects" class="btn-secondary" data-i18n="btn_work">View Work</a>
       </div>
     </div>
 
@@ -67,7 +77,8 @@
 
       <!-- Badge màu xanh lá nằm dưới ảnh -->
       <div class="hero-badge-green">
-        <span></span>Sẵn sàng cho cơ hội mới · Available
+        <span></span>
+        <p data-i18n="status_text">Available for Opportunities</p>
       </div>
     </div>
 
@@ -76,49 +87,57 @@
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
         <path d="M8 3v10M3 8l5 5 5-5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
       </svg>
-      scroll
+      <p data-i18n="scroll">scroll</p>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="section-header fade-up">
-      <div class="section-tag">01 — Về tôi</div>
-      <h2 class="section-title">About <span>Me</span></h2>
+      <div class="section-tag" data-i18n="sec_about">01 — About</div>
+      <h2 class="section-title" data-i18n="sec_about_title">About <span>Me</span></h2>
     </div>
     <div class="about-grid">
       <div class="about-text fade-up">
-        <p>Xin chào! Tôi là <strong>Nguyễn Quang Huy</strong> — kỹ sư phần mềm tốt nghiệp tại Học viện Công nghệ Bưu
-          chính Viễn thông (PTIT), chuyên ngành Hệ thống Thông tin.</p>
-        <p>Hiện tại tôi đang làm <strong>Kỹ sư phát triển hệ thống IoT</strong> tại Công ty Cổ phần Công nghệ và Truyền
-          thông Minh Việt (MINHVIET., JSC), chủ yếu nghiên cứu và triển khai các giải pháp IoT sử dụng công nghệ
-          LoRaWAN.</p>
-        <p><em>Hi! I'm a software engineer graduated from PTIT. I enjoy solving real-world problems through smart
-            technology — from embedded devices to cloud applications.</em></p>
+        <p data-i18n="about_p1">Xin chào! Tôi là <strong>Nguyễn Quang Huy</strong> — kỹ sư phần mềm tốt nghiệp tại Học
+          viện Công nghệ Bưu chính Viễn thông (PTIT), chuyên ngành Hệ thống Thông tin.</p>
+        <p data-i18n="about_p2">Hiện tại tôi đang làm <strong>IoT System Engineer</strong> tại <strong>MINHVIET.,
+            JSC</strong>, chủ yếu nghiên cứu và triển khai các giải pháp IoT sử dụng công nghệ LoRaWAN.</p>
         <ul class="info-list">
-          <li><span class="icon">📍</span>Thanh Xuân, Hà Nội</li>
-          <li><span class="icon">🎓</span>PTIT — Information Systems, 2017–2022</li>
-          <li><span class="icon">📞</span>(+84) 397 193 381</li>
-          <li><span class="icon">🐙</span><a href="https://github.com/huynq199x"
-              style="color:var(--muted);text-decoration:none;">github.com/huynq199x</a></li>
+          <li><span class="icon">📍</span><span data-i18n="about_loc">Thanh Xuân, Hà Nội</span></li>
+          <li><span class="icon">🎓</span><span data-i18n="about_edu">PTIT — Information Systems, 2017–2022</span></li>
+          <li><span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path
+                  d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a19.79 19.79 0 01-3.07-8.68A2 2 0 012 .98h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
+              </svg>
+            </span>(+84) 397 193 381</li>
+          <li><span class="icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg></span>
+            <a href="https://github.com/huynq199x"
+              style="color:var(--muted);text-decoration:none;">github.com/huynq199x</a>
+          </li>
         </ul>
       </div>
       <div class="about-stats fade-up">
         <div class="stat-card">
           <div class="stat-num">3+</div>
-          <div class="stat-label">Năm kinh nghiệm<br><em>Years of Experience</em></div>
+          <div class="stat-label" data-i18n="stat_yoe">Years of Experience</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">5+</div>
-          <div class="stat-label">Dự án thực tế<br><em>Real-world Projects</em></div>
+          <div class="stat-label" data-i18n="stat_proj">Real-world Projects</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">10+</div>
-          <div class="stat-label">Công nghệ<br><em>Technologies</em></div>
+          <div class="stat-label" data-i18n="stat_tech">Technologies</div>
         </div>
         <div class="stat-card">
           <div class="stat-num">🌏</div>
-          <div class="stat-label">Kinh nghiệm quốc tế<br><em>International XP</em></div>
+          <div class="stat-label" data-i18n="stat_intl">International XP</div>
         </div>
       </div>
     </div>
@@ -127,12 +146,12 @@
   <!-- SKILLS -->
   <section id="skills">
     <div class="section-header fade-up">
-      <div class="section-tag">02 — Kỹ năng</div>
-      <h2 class="section-title">Tech <span>Skills</span></h2>
+      <div class="section-tag" data-i18n="sec_skills">02 — Skills</div>
+      <h2 class="section-title" data-i18n="sec_skills_title">Tech <span>Skills</span></h2>
     </div>
     <div class="skills-container">
       <div class="skills-category fade-up">
-        <div class="cat-label">Ngôn ngữ lập trình · Programming Languages</div>
+        <div class="cat-label" data-i18n="cat_lang">Programming Languages</div>
         <div class="skills-grid">
           <div class="skill-chip lang">Python</div>
           <div class="skill-chip lang">Swift</div>
@@ -144,7 +163,7 @@
         </div>
       </div>
       <div class="skills-category fade-up">
-        <div class="cat-label">Công cụ · Tools</div>
+        <div class="cat-label" data-i18n="cat_tools">Tools & IDEs</div>
         <div class="skills-grid">
           <div class="skill-chip tool">Git / GitHub</div>
           <div class="skill-chip tool">Xcode</div>
@@ -163,7 +182,7 @@
         </div>
       </div>
       <div class="skills-category fade-up">
-        <div class="cat-label">Nền tảng · Platforms</div>
+        <div class="cat-label" data-i18n="cat_platforms">Platforms & Frameworks</div>
         <div class="skills-grid">
           <div class="skill-chip platform">LoRaWAN</div>
           <div class="skill-chip platform">ChirpStack</div>
@@ -184,8 +203,8 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="section-header fade-up">
-      <div class="section-tag">03 — Kinh nghiệm</div>
-      <h2 class="section-title">Work <span>Experience</span></h2>
+      <div class="section-tag" data-i18n="sec_exp">03 — Experience</div>
+      <h2 class="section-title" data-i18n="sec_exp_title">Work <span>Experience</span></h2>
     </div>
     <div class="exp-container">
       <div class="timeline">
@@ -193,15 +212,15 @@
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-header">
-              <div class="exp-role">Lập trình viên Freelance · Freelance Developer</div>
-              <div class="exp-period">2025 — Hiện tại</div>
+              <div class="exp-role" data-i18n="role_freelance">Freelance Developer</div>
+              <div class="exp-period" data-i18n="period_freelance">2025 — Present</div>
             </div>
             <div class="exp-company">Self-employed</div>
             <ul class="exp-list">
-              <li>Phát triển ứng dụng Web Fullstack: giao diện người dùng, API, cơ sở dữ liệu</li>
-              <li>Xây dựng ứng dụng Mobile (iOS, Android) theo yêu cầu khách hàng</li>
-              <li>Phát triển ứng dụng Desktop đa nền tảng (macOS, Windows)</li>
-              <li>Xây dựng Automation Tools hỗ trợ tự động hóa quy trình làm việc</li>
+              <li data-i18n="desc_freelance_1">Fullstack Web development: frontend, API, database</li>
+              <li data-i18n="desc_freelance_2">Mobile apps (iOS, Android) on demand</li>
+              <li data-i18n="desc_freelance_3">Cross-platform Desktop apps (macOS, Windows)</li>
+              <li data-i18n="desc_freelance_4">Automation tools for workflow optimization</li>
             </ul>
           </div>
         </div>
@@ -209,17 +228,17 @@
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-header">
-              <div class="exp-role">Kỹ sư phát triển hệ thống IoT · IoT System Engineer</div>
-              <div class="exp-period">07/2023 — Hiện tại</div>
+              <div class="exp-role" data-i18n="role_minhviet">IoT System Engineer</div>
+              <div class="exp-period" data-i18n="period_minhviet">07/2023 — Present</div>
             </div>
             <div class="exp-company">MINHVIET., JSC</div>
             <ul class="exp-list">
-              <li>Nghiên cứu &amp; phát triển hệ thống IoT sử dụng công nghệ LoRaWAN (Server, Cloud, Gateway, Sensor...)
+              <li data-i18n="desc_mv_1">Research & develop IoT systems using LoRaWAN (Server, Cloud, Gateway, Sensor...)
               </li>
-              <li>Cài đặt và tối ưu hóa phần mềm cho thiết bị IoT trong môi trường thực tế</li>
-              <li>Ứng dụng công cụ AI để tăng tốc độ giải quyết bài toán công việc</li>
-              <li>Nghiên cứu giải pháp chăm sóc sức khỏe từ xa &amp; truyền thanh không dây ứng dụng CNTT</li>
-              <li>Thiết kế và triển khai hệ thống mạng LAN/TEL</li>
+              <li data-i18n="desc_mv_2">Install and optimize IoT device software for real-world environments</li>
+              <li data-i18n="desc_mv_3">Apply AI tools to accelerate problem-solving and task completion</li>
+              <li data-i18n="desc_mv_4">Research remote healthcare solutions & wireless broadcasting using IT</li>
+              <li data-i18n="desc_mv_5">Design and deploy LAN/TEL network systems</li>
             </ul>
           </div>
         </div>
@@ -227,14 +246,14 @@
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-header">
-              <div class="exp-role">Lập trình viên iOS · iOS Developer</div>
-              <div class="exp-period">11/2022 — 07/2023</div>
+              <div class="exp-role" data-i18n="role_beetech">iOS Developer</div>
+              <div class="exp-period" data-i18n="period_beetech">11/2022 — 07/2023</div>
             </div>
             <div class="exp-company">Beetech Co., Ltd</div>
             <ul class="exp-list">
-              <li>Làm việc theo mô hình Agile / Scrum, phát triển và tối ưu hóa tính năng hệ thống</li>
-              <li>Thành thạo RESTful API, Git, GitLab/GitHub</li>
-              <li>Kinh nghiệm làm việc với khách hàng Nhật Bản, tuân thủ quy trình kiểm thử nghiêm ngặt</li>
+              <li data-i18n="desc_bt_1">Worked in Agile / Scrum model, developed and optimized system features</li>
+              <li data-i18n="desc_bt_2">Proficient in RESTful API, Git, GitLab/GitHub</li>
+              <li data-i18n="desc_bt_3">Experience with Japanese clients, followed strict QA processes</li>
             </ul>
           </div>
         </div>
@@ -242,14 +261,14 @@
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-header">
-              <div class="exp-role">Thực tập sinh iOS · iOS Development Intern</div>
+              <div class="exp-role" data-i18n="role_alobridge">iOS Development Intern</div>
               <div class="exp-period">07/2022 — 10/2022</div>
             </div>
             <div class="exp-company">Alobridge Co., Ltd</div>
             <ul class="exp-list">
-              <li>Phát triển UI iOS với Swift, UIKit, SwiftUI</li>
-              <li>Áp dụng design patterns: MVP, MVC, MVVM, VIPER</li>
-              <li>Làm việc với Core Data và các framework theo chuẩn Apple</li>
+              <li data-i18n="desc_al_1">Developed iOS UI with Swift, UIKit, SwiftUI</li>
+              <li data-i18n="desc_al_2">Applied design patterns: MVP, MVC, MVVM, VIPER</li>
+              <li data-i18n="desc_al_3">Worked with Core Data and Apple-recommended frameworks</li>
             </ul>
           </div>
         </div>
@@ -257,13 +276,13 @@
           <div class="timeline-dot"></div>
           <div class="exp-card">
             <div class="exp-header">
-              <div class="exp-role">Thực tập sinh Web · Web Development Intern</div>
+              <div class="exp-role" data-i18n="role_vnpt">Web Development Intern</div>
               <div class="exp-period">05/2021 — 07/2021</div>
             </div>
             <div class="exp-company">VNPT</div>
             <ul class="exp-list">
-              <li>Phát triển và bảo trì website sử dụng HTML, CSS, JavaScript và VueJS</li>
-              <li>Tích hợp API, thiết kế UI responsive và cải thiện trải nghiệm người dùng</li>
+              <li data-i18n="desc_vn_1">Developed and maintained websites using HTML, CSS, JavaScript and VueJS</li>
+              <li data-i18n="desc_vn_2">API integration, responsive UI design and UX improvements</li>
             </ul>
           </div>
         </div>
@@ -274,8 +293,8 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="section-header fade-up">
-      <div class="section-tag">04 — Dự án</div>
-      <h2 class="section-title">Notable <span>Projects</span></h2>
+      <div class="section-tag" data-i18n="sec_projects">04 — Projects</div>
+      <h2 class="section-title" data-i18n="sec_proj_title">Notable <span>Projects</span></h2>
     </div>
     <div class="proj-grid">
       <div class="proj-card fade-up">
@@ -284,8 +303,9 @@
         </div>
         <div class="proj-body">
           <div class="proj-name">ThingsAwake — IoT Platform</div>
-          <div class="proj-desc">Hệ thống IoT LoRaWAN hoàn chỉnh: Gateway, End Device, Bridge, Sensor Hub. Triển khai
-            tại Hà Nội, Đà Nẵng, TP.HCM. Hỗ trợ Smart Farm, Smart Home. Platform Web + Android + iOS.</div>
+          <div class="proj-desc" data-i18n="proj_thingsawake">Complete LoRaWAN IoT system: Gateway, End Device, Bridge,
+            Sensor Hub. Deployed in Hanoi, Da Nang, Ho Chi Minh City. Supports Smart Farm, Smart Home. Platform: Web +
+            Android + iOS.</div>
           <div class="proj-tags">
             <span class="proj-tag"
               style="background:rgba(255,94,98,0.1);color:var(--grad1);border:1px solid rgba(255,94,98,0.2)">LoRaWAN</span>
@@ -301,8 +321,8 @@
           🏭</div>
         <div class="proj-body">
           <div class="proj-name">SCADA — RCS</div>
-          <div class="proj-desc">Phần mềm điều khiển &amp; giám sát hệ thống cống ngăn triều Quận 8, TP.HCM. Lắp đặt
-            thiết bị, cấu hình và kiểm thử trong môi trường thực tế.</div>
+          <div class="proj-desc" data-i18n="proj_scada">Control & monitoring software for tidal sluice system in
+            District 8, Ho Chi Minh City. Equipment installation, system configuration and real-world testing.</div>
           <div class="proj-tags">
             <span class="proj-tag"
               style="background:rgba(0,201,255,0.1);color:#0099cc;border:1px solid rgba(0,201,255,0.2)">SCADA</span>
@@ -318,8 +338,9 @@
           📱</div>
         <div class="proj-body">
           <div class="proj-name">Production Management</div>
-          <div class="proj-desc">Hệ thống quản lý sản xuất hợp tác với đối tác Nhật Bản. Theo dõi tiến độ, vẽ bản đồ,
-            biểu đồ 2D/3D, báo cáo thống kê theo tiêu chuẩn Nhật.</div>
+          <div class="proj-desc" data-i18n="proj_prodmgmt">Production management system in collaboration with Japanese
+            partners. Progress tracking, mapping, 2D/3D charts, statistics reports following Japanese quality standards.
+          </div>
           <div class="proj-tags">
             <span class="proj-tag"
               style="background:rgba(165, 159, 168, 0.1);color:var(--grad4);border:1px solid rgba(196,113,237,0.2)">iOS
@@ -339,8 +360,8 @@
         </div>
         <div class="proj-body">
           <div class="proj-name">Medda — Healthcare App</div>
-          <div class="proj-desc">Ứng dụng chăm sóc sức khỏe: live chat với bác sĩ, quản lý lịch hẹn, theo dõi bệnh án,
-            nhắc lịch uống thuốc. Tập trung UX và độ chính xác dữ liệu y tế.</div>
+          <div class="proj-desc" data-i18n="proj_medda">Healthcare app: live chat with doctors, appointment management,
+            medical record tracking, medication reminders. Focused on UX and medical data accuracy.</div>
           <div class="proj-tags">
             <span class="proj-tag"
               style="background:rgba(79,172,254,0.1);color:#2a7fd4;border:1px solid rgba(79,172,254,0.2)">iOS ·
@@ -358,8 +379,8 @@
           🏢</div>
         <div class="proj-body">
           <div class="proj-name">Network Infrastructure</div>
-          <div class="proj-desc">Thiết kế hạ tầng kỹ thuật: LAN, TEL nội bộ, rack, UPS, switch, firewall, access point,
-            camera. Phân hoạch IP và VLAN toàn bộ hệ thống.</div>
+          <div class="proj-desc" data-i18n="proj_network">Technical infrastructure design: LAN, internal TEL, rack, UPS,
+            switch, firewall, access point, security cameras. Full IP and VLAN partitioning.</div>
           <div class="proj-tags">
             <span class="proj-tag"
               style="background:rgba(247,151,30,0.1);color:var(--grad2);border:1px solid rgba(247,151,30,0.2)">Network</span>
@@ -377,13 +398,12 @@
   <!-- CONTACT -->
   <section id="contact">
     <div class="section-header fade-up">
-      <div class="section-tag">05 — Liên hệ</div>
-      <h2 class="section-title">Get In <span>Touch</span></h2>
+      <div class="section-tag" data-i18n="sec_contact">05 — Contact</div>
+      <h2 class="section-title" data-i18n="sec_contact_title">Get In <span>Touch</span></h2>
     </div>
     <div class="contact-inner fade-up">
-      <p style="color:var(--muted);font-size:0.97rem;line-height:1.78">
-        Bạn có dự án thú vị hoặc cơ hội hợp tác? Tôi luôn sẵn sàng lắng nghe!<br>
-        <em>Have an interesting project or opportunity? I'm always open to new conversations!</em>
+      <p data-i18n="contact_desc" style="color:var(--muted);font-size:0.97rem;line-height:1.78">
+        Have an interesting project or opportunity? I'm always open to new conversations!
       </p>
       <a href="mailto:ptitnqh@gmail.com" class="contact-email">ptitnqh@gmail.com</a>
       <div class="contact-links">
@@ -413,7 +433,7 @@
   </section>
 
   <footer>
-    <p>Designed &amp; Built by <strong>Nguyễn Quang Huy</strong> &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; codethue.io.vn</p>
+    <p>Designed &amp; Built by <strong>NQH</strong> &nbsp;·&nbsp; © 2026 &nbsp;·&nbsp; codethue.io.vn</p>
   </footer>
   <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
   <script src="script.js" defer></script>
